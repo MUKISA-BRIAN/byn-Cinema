@@ -1,16 +1,37 @@
-# React + Vite
+# BYN Cinema
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A movie and TV discovery web app built with React, Material UI and the TMDB API.
 
-Currently, two official plugins are available:
+**Live demo:**https://byn-cinema-git-main-byn-cinema.vercel.app/ 
+**Repository:** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshots
 
-## React Compiler
+![Homepage](screenshots/home.png)
+![Details page](screenshots/details.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Dark theme with a top bar, search box and sidebar (a slide-in menu on mobile)
+- Content rows on the home page: Trending, Popular Movies, Action Movies, Popular TV Shows
+- Live data from the TMDB API, with no hardcoded catalogue
+- Search for movies and TV shows, with loading, error and "no results" messages
+- Details page with poster, overview, release date, rating and genres
+- Movies and TV Shows pages with a genre filter and pagination
+- Watchlist saved in localStorage, so it survives a refresh
+- Fallbacks for missing posters and missing data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech stack
+
+React, Vite, Material UI, React Router, TMDB API, Vercel
+
+## Protecting the API key
+
+The browser never sees the TMDB key. The app calls `/api/tmdb/...`, and a proxy adds the key. Locally this is the Vite dev server (`vite.config.js`). In production it is a Vercel serverless function (`api/tmdb.js`), with the key stored as an environment variable.
+
+## Run locally
+
+1. Clone the repository and run `npm install`
+2. Get a free API key (v3) at themoviedb.org
+3. Copy `.env.example` to `.env` and set `TMDB_API_KEY=your_key_here`
+4. Run `npm run dev`
