@@ -3,7 +3,7 @@
 A movie and TV discovery web app built with React, Material UI and the TMDB API.
 
 **Live demo:**https://byn-cinema-git-main-byn-cinema.vercel.app/ 
-**Repository:** 
+**Repository:** https://github.com/MUKISA-BRIAN/byn-Cinema
 
 ## Screenshots
 
