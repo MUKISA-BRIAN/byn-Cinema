@@ -2,7 +2,11 @@
 
 A movie and TV discovery web app built with React, Material UI and the TMDB API.
 
+<<<<<<< HEAD
 **Live demo:** https://byn-cinema-git-main-byn-cinema.vercel.app/
+=======
+**Live demo:**https://byn-cinema-git-main-byn-cinema.vercel.app/ 
+>>>>>>> 4a752ed8de2765151aba345e847005917f61eb86
 **Repository:** https://github.com/MUKISA-BRIAN/byn-Cinema
 
 ## Screenshots
@@ -34,4 +38,8 @@ The browser never sees the TMDB key. The app calls `/api/tmdb/...`, and a proxy 
 1. Clone the repository and run `npm install`
 2. Get a free API key (v3) at themoviedb.org
 3. Copy `.env.example` to `.env` and set `TMDB_API_KEY=your_key_here`
+<<<<<<< HEAD
 4. Run `npm run dev`
+=======
+4. Run `npm run dev`
+>>>>>>> 4a752ed8de2765151aba345e847005917f61eb86
